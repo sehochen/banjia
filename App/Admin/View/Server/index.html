@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/pintuer.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/admin.css">
+    <script src="__PUBLIC__/Admin/js/jquery.js"></script> 
+    <script src="__PUBLIC__/Admin/js/pintuer.js"></script> 
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+
+  <table class="table table-hover" style="width:10%;float:left;">
+    <tr>
+      <th>分类名称</th>
+    </tr>
+    <volist name="list" id="vo">
+        <tr>
+          <td> <a href="__ACTION__/id/{$vo.cid}">{$vo.name}</a> </td>
+        </tr>
+    </volist>
+  </table>
+  <table class="table table-hover" style="width:90%;float:left;">
+    <tr>
+      <td>
+        <form action="__CONTROLLER__/edit" method="post">
+
+            <input type="hidden" name="id" value="{$info.id}">
+
+            <!-- 加载编辑器的容器 -->
+            <script id="container" name="content" type="text/plain">{$info.content}</script>
+            <!-- 配置文件 -->
+            <script type="text/javascript" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+            <!-- 编辑器源码文件 -->
+            <script type="text/javascript" src="__PUBLIC__/ueditor/ueditor.all.js"></script>
+            <!-- 实例化编辑器 -->
+            <script type="text/javascript">
+                var ue = UE.getEditor('container');
+            </script>    
+
+            <div class="form-group">
+              <div class="label">
+                <label></label>
+              </div>
+              <div class="field">
+                <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+              </div>
+            </div>       
+        </form>        
+      </td>
+    </tr>
+  </table>
+
+
+<!-- <ul>
+ <volist name="list" id="vo">
+      <li> <a href="">{$vo.name}</a> </li>
+</volist> 
+</ul> -->
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+</body>
+</html>

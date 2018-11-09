@@ -1,0 +1,26 @@
+  <div class="left l">
+  <div class="left1">
+  <div class="cntxt">
+    <h2>资讯中心</h2>
+    <p>Information Center</p>
+    </div>
+  <div class="h0"></div>
+  <ul class="left_menu ">    
+   
+<volist name="newList" id="vo">     
+    <li>
+      <a title="{$vo.name}" href="{:U('Information/index/pid/'.$vo['cid'])}">{$vo.name}</a>
+    </li>
+</volist>
+    
+  </ul>
+</div>
+
+<!-- left1 end-->
+
+
+<!-- contact -->
+<include file="Public/contact" />
+
+
+</div>

@@ -1,0 +1,261 @@
+<layout name="Public/layout"/> 
+
+<!-- slide -->
+<include file="Public/slide" />
+
+
+
+<!-- 
+<div class="w">
+  <div class="w tit_h tit_a">
+    <h2>服务品牌</h2>
+    <p>Brand</p>
+  </div>
+</div>
+<div class="case_i">
+  <div class="prtlist_i prt_i">
+    <div class="hd"> <a title="上一个" class="prev"></a> <a class="next" title="下一个"></a></div> 
+    <div class="bd">
+      <div class="tempWrap">
+        <div class="tempWrap" style="overflow:hidden; position:relative; width:1050px">
+          <ul style="width: 1050px; position: relative; overflow-x: hidden; overflow-y: hidden; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; left: 0px; ">
+            <li style="float: left; width: 180px; ">
+              <div class="casepic logopic">
+                <div class="middle-in"><a title="TCL" href="__PUBLIC__/Home//logo/2017/0220/84.html"><img title="TCL" alt="TCL" src="__PUBLIC__/Home/picture/1-1f220110629348-lp.jpg"></a></div>
+              </div>
+            </li>
+<li style="float: left; width: 180px; ">
+              <div class="casepic logopic">
+                <div class="middle-in"><a title="奥克斯" href="__PUBLIC__/Home//logo/2017/0220/83.html"><img title="奥克斯" alt="奥克斯" src="__PUBLIC__/Home/picture/1-1f22011020nd-lp.jpg"></a></div>
+              </div>
+            </li>
+<li style="float: left; width: 180px; ">
+              <div class="casepic logopic">
+                <div class="middle-in"><a title="科龙" href="__PUBLIC__/Home//logo/2017/0220/82.html"><img title="科龙" alt="科龙" src="__PUBLIC__/Home/picture/1-1f220110034g7-lp.jpg"></a></div>
+              </div>
+            </li>
+<li style="float: left; width: 180px; ">
+              <div class="casepic logopic">
+                <div class="middle-in"><a title="三菱重工" href="__PUBLIC__/Home//logo/2017/0220/81.html"><img title="三菱重工" alt="三菱重工" src="__PUBLIC__/Home/picture/1-1f2201059192v-lp.jpg"></a></div>
+              </div>
+            </li>
+<li style="float: left; width: 180px; ">
+              <div class="casepic logopic">
+                <div class="middle-in"><a title="大金" href="__PUBLIC__/Home//logo/2017/0220/80.html"><img title="大金" alt="大金" src="__PUBLIC__/Home/picture/1-1f220105k24r-lp.jpg"></a></div>
+              </div>
+            </li>
+<li style="float: left; width: 180px; ">
+              <div class="casepic logopic">
+                <div class="middle-in"><a title="海信" href="__PUBLIC__/Home//logo/2017/0220/79.html"><img title="海信" alt="海信" src="__PUBLIC__/Home/picture/1-1f220105425x0-lp.jpg"></a></div>
+              </div>
+            </li>
+<li style="float: left; width: 180px; ">
+              <div class="casepic logopic">
+                <div class="middle-in"><a title="海尔" href="__PUBLIC__/Home//logo/2017/0220/78.html"><img title="海尔" alt="海尔" src="__PUBLIC__/Home/picture/1-1f220105146207-lp.jpg"></a></div>
+              </div>
+            </li>
+<li style="float: left; width: 180px; ">
+              <div class="casepic logopic">
+                <div class="middle-in"><a title="美的" href="__PUBLIC__/Home//logo/2017/0220/77.html"><img title="美的" alt="美的" src="__PUBLIC__/Home/picture/1-1f22010512t96-lp.jpg"></a></div>
+              </div>
+            </li>
+<li style="float: left; width: 180px; ">
+              <div class="casepic logopic">
+                <div class="middle-in"><a title="格力" href="__PUBLIC__/Home//logo/2017/0220/76.html"><img title="格力" alt="格力" src="__PUBLIC__/Home/picture/1-1f22010491lo-lp.jpg"></a></div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    jQuery(".prtlist_i").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:5,delayTime:500,interTime:3000,trigger:"click"});
+    </script>
+</div> -->
+
+
+<div class="w tit_h">
+  <h2>服务项目</h2>
+  <p>Service Items</p>
+</div>
+<div class="w yewu">
+<!-- 
+  <div class="ywmk l yw1">
+   <div class="ywmk_c">
+      <div class="middle-in"> <a href="__PUBLIC__/Home//wdxby/dh/" title=""><img src="__PUBLIC__/Home/picture/i1.jpg" alt=""></a></div>
+    </div> 
+    <div class="ywmk_txt"><a href="__PUBLIC__/Home//wdxby/dh/" title="广州空调维修">广州空调维修</a></div>
+  </div> -->
+
+
+<!-- server -->
+<volist name="serverList" id="vo" key="k">
+  
+  <div class="ywmk l yw{$k}">
+    <div class="ywmk_txt"><a href="__MODULE__/Server/index/id/{$vo.cid}" title="{$vo.name}">{$vo.name}</a></div>
+  </div>
+
+</volist>
+<!-- server -->
+
+</div>
+
+
+
+
+<div class="h20"></div>
+<div class="w">
+  <div class="w tit_h">
+    <h2>服务案例</h2>
+    <p style="margin-bottom:10px;">Case</p>
+    <p>客户对我们的肯定是我们前进的动力及方向，以客为本竭尽全力满足客户多样化的需求，我们在不断努力...</p>
+  </div>
+</div>
+<div class="case_i">
+  <div class="prtlist_i">
+    <div class="hd"> <a title="上一个" class="prev"></a> <a class="next" title="下一个"></a></div>
+    <div class="bd">
+      <div class="tempWrap">
+        <div class="tempWrap" style="overflow:hidden; position:relative; width:1050px">
+          <ul style="width: 1050px; position: relative; overflow-x: hidden; overflow-y: hidden; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; left: 0px; ">
+
+<!-- case -->
+<volist name="caseList" id="vo">
+            <li style="float: left; width: 180px; ">
+              <div class="casepic">
+                <div class="middle-in">
+                  <a title="{$vo.title}" href="{:U('Case/detail/id/'.$vo['id'])}">
+                    <img title="{$vo.title}" alt="{$vo.title}" src="__PUBLIC__/{$vo.img}">
+                  </a>
+                </div>
+              </div>
+              <div class="casetxt">
+                <a title="{$vo.title}" href="{:U('Case/detail/id/'.$vo['id'])}" style="color:#">{$vo.title}</a>
+              </div>
+            </li>  
+</volist>
+<!-- case -->
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    jQuery(".prtlist_i").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:5,delayTime:500,interTime:3000,trigger:"click"});
+    </script>
+</div>
+
+
+<div class="h20"></div>
+<div class="h20"></div>
+
+<div class="about mt20">
+  <div class="w">
+    <div class="aimg l">
+      <p><img src="__PUBLIC__/Home/picture/about.jpg" alt="广州空调维修公司简介"></p>
+    </div>
+    <div class="about_i r rte">
+      <div class="titile_i">
+        <h2>公司介绍<span>About us</span></h2>
+      </div>
+      <p style="text-indent: 2em;">  {:mb_substr($intro['content'], 0,310,'utf-8')}...  </p>
+      <a class="atxt ale" href="{:U('Page/intro')}">MORE</a></div>
+  </div>
+</div>
+
+
+
+<div class="w tit_h" style="padding-bottom:5px;">
+  <h2>资讯中心</h2>
+  <p>News</p>
+</div>
+<div class="w">
+
+  <div class="news l" style="margin-left:0;">
+    <div class="news_tit">
+      <a title="维修知识" href="{:U('Information/index/pid/2')}" class="more">>> MORE</a>
+      <h2>维修知识</h2>
+    </div>
+    <ul class="mt15">
+
+<!-- zhishiList -->
+<volist name="zhishiList" id="vo">
+      <li>
+        <a href="__PUBLIC__/Home//jszx/wxzs/175.html" title="">{$vo.title}..</a>
+        <span>{:date('m月d日',$vo['add_time'])}</span>
+      </li>
+</volist>
+<!-- zhishiList -->
+
+    </ul>
+  </div>
+
+
+
+
+  <div class="news l">
+    <div class="news_tit">
+      <a title="公司动态" href="{:U('Information/index/pid/1')}" class="more">>> MORE</a>
+      <h2>公司动态</h2>
+    </div>
+    <ul class="mt15">
+
+<!-- gsdtList     -->
+<volist name="gsdtList" id="vo">
+      <li>
+        <a href="__PUBLIC__/" title="">{$vo.title}..</a>
+        <span>{:date('m月d日',$vo['add_time'])}</span>
+      </li>
+</volist>
+<!-- gsdtList     -->
+
+    </ul>
+  </div>
+
+
+
+
+  <div class="fqa l">
+    <div class="news_tit">
+      <a title="常见问题" href="{:U('Information/index/pid/3')}" class="more">>> MORE</a>
+      <h2>常见问题</h2>
+    </div>
+    <div class="txtMarquee-top">
+      <div class="bd mt20">
+        <div class="tempWrap" style="overflow:hidden; position:relative; height:200px">
+          <ul class="infoList" style="height: 1368px; position: relative; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; top: -168px; ">
+
+<!-- askList     -->
+<volist name="askList" id="vo">
+            <li style="height: 114px; ">
+              <a title="{$vo.title}？" href="{:U('Ask/detail/id/'.$vo['id'])}">{$vo.title}？</a>
+              <p>{:mb_substr($vo['content'], 0,50,'utf-8')}</p>
+            </li>
+</volist>
+<!-- askList     -->
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+			jQuery(".txtMarquee-top").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:3,interTime:50});
+		</script> 
+  </div>
+</div>
+
+<div class="h0"></div>
+<div class="links"> 友情链接：
+
+<volist name="linkList" id="vo">
+  <a href='http://{$vo.link}' target='_blank'>{$vo.name}</a>   |   
+</volist>
+
+ </div>
+
+

@@ -1,0 +1,51 @@
+<layout name="Public/layout"/> 
+
+<!-- slide -->
+<include file="Public/slide" />
+
+
+
+<div class="bannerbg" > </div>
+<div class="bgb"></div>
+<div class="h0"></div>
+<div class="w">
+
+
+<!-- server -->
+<include file="Public/server" />
+
+
+  <!-- left end -->
+  <div class="right r">
+    <div class="column"> 当前位置：<a href="{:U('Index/index')}">主页</a> > <a href='__CONTROLLER__/index'>服务案例</a> >  </div>
+    <div class="zcont">
+      <h1 class="znewstit">{$info.title}</h1>
+      <div id="info">
+<!-- <div class="h10"></div>
+
+<div class="h15"></div> -->
+<p style="text-align:center;" ><img alt="" src="__PUBLIC__/{$info.img}" style="width: 384px; height: 288px;" /></p> </div>
+      <!--info end -->
+      <div class="news_url">  </div>
+      <!--news_url end -->
+      <div class="page_pn">
+        <div class="prev">上一篇：<a href='__ACTION__/id/{$prev.id }'>{:$prev['title'] ? $prev['title'] : '没有了' }</a> </div>
+        <div class="next">下一篇：<a href='__ACTION__/id/{:$next['id'] ? $next['id'] : I(\'get.id\') }'>{:$next['title'] ? $next['title'] : '没有了' }</a> </div>
+      </div>
+      <!--page_pn end -->
+      <div class="guess_like">
+        
+        
+        <!-- prtlist end --> 
+        
+      </div>
+      <!--guess_like end --> 
+      
+    </div>
+    <!--zcont end --> 
+  </div>
+  <!--rihgt end --> 
+</div>
+<!--main end -->
+<div class="h20"></div>
+

@@ -1,0 +1,52 @@
+<layout name="Public/layout"/> 
+
+<!-- slide -->
+<include file="Public/slide" />
+
+
+<div class="bannerbg"> </div>
+<div class="bgb"></div>
+<div class="h0"></div>
+<div class="w">
+
+
+<!-- server -->
+<include file="Public/server" />
+
+
+  <!-- left end -->
+  <div class="right r">
+    <div class="column"> 当前位置：<a href="{:U('Index/index')}">主页</a> > <a href="{:U('Information/index')}">资讯中心</a> >  </div>
+    <!-- column end -->
+    <div class="zcont">
+      <h1 class="znewstit">{$info.title} </h1>
+      <div class="author">{$info.authour} &nbsp;&nbsp; 发布于：{:date('Y年m月d日 H时i分s秒',$info['add_time'])} &nbsp;&nbsp; </div>
+      <div id="info"><p style="color: rgb(75, 72, 72); font-family: Verdana; font-size: 12px; line-height: 22px; white-space: normal;"><span style="font-size:12px"><span style="font-family:Verdana">
+      
+      <div>
+  {$info.content}
+</div>
+
+      
+      </div>
+      <!--info end -->
+      <div class="news_url">  </div>
+      <!--news_url end -->
+      <div class="page_pn">
+<!--         <div class="prev">上一篇：<a href='/jszx/zsfs/171.html'>广州空调清洗-如何正确选择家用中央空调</a> </div>
+        <div class="next">下一篇：<a href='/jszx/zsfs/176.html'>广州空调清洗-空调安装后应检查问题</a> </div> -->
+        <div class="prev">上一篇：<a href='__ACTION__/id/{$prev.id }'>{:$prev['title'] ? $prev['title'] : '没有了' }</a> </div>
+        <div class="next">下一篇：<a href='__ACTION__/id/{:$next['id'] ? $next['id'] : I(\'get.id\') }'>{:$next['title'] ? $next['title'] : '没有了' }</a> </div>
+
+      </div>
+      <!--page_pn end -->
+    
+      <!--guess_like end --> 
+      
+    </div>
+    <!--zcont end --> 
+  </div>
+  <!--rihgt end --> 
+</div>
+<!--main end -->
+

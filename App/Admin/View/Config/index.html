@@ -1,0 +1,217 @@
+<?php
+    $website=C('website');
+?>
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title>网站信息</title>  
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/pintuer.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/admin.css">
+    <script src="__PUBLIC__/Admin/js/jquery.js"></script>
+    <script src="__PUBLIC__/Admin/js/pintuer.js"></script>  
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 网站信息</strong></div>
+  <div class="body-content">
+
+    <form method="post" class="form-x" action="__SELF__" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <div class="label">
+          <label>网站标题：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="title" value="{$website['title']}" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>网站LOGO：</label>
+        </div>
+        <div class="field">
+          <input type="text" id="url1" name="logo" class="input tips" style="width:25%; float:left;" value="{$website['logo']}" data-toggle="hover" data-place="right" data-image="__PUBLIC__/{$website['logo']}"  />
+          <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传" >
+          <input type="file" name="logo" id="uploads" style="display:none;">
+        </div>
+      </div>
+
+<script>
+  $("#image1").click(function(){
+    $("#uploads").click();
+  });
+
+  $("#uploads").change(function(){
+    var cont=$("#url1").val();
+    if(cont.length <= 0){
+      $("#url1").val( $(this).val() );
+    }
+  });
+</script>
+
+
+      <div class="form-group">
+        <div class="label">
+          <label>网站关键字：</label>
+        </div>
+        <div class="field">
+          <textarea class="input" name="keywords" style="height:80px">{$website['keywords']}</textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>网站描述：</label>
+        </div>
+        <div class="field">
+          <textarea class="input" name="description">{$website['description']}</textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>网页编码：</label>
+        </div>
+        <div class="field">
+          <select name="charset" id="" style="width:25%; float:left; height:6%;">
+            <option value="utf-8" {:$website['charset']=='utf-8' ?' selected="selected" ':null;} >utf-8</option>
+            <option value="gbk" {:$website['charset']=='gbk' ?' selected="selected" ':null;}>gbk</option>
+          </select>
+
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>联系人：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="contact" value="{$website['contact']}" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>手机：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="phone" value="{$website['phone']}" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>电话：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="tel" value="{$website['tel']}" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <div class="label">
+          <label>传真：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="fax" value="{$website['fax']}" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>QQ：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="qq" value="{$website['qq']}" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>微信：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="wechat" value="{$website['wechat']}" />
+          <div class="tips"></div>
+        </div>
+      </div>
+ 
+      <div class="form-group">
+        <div class="label">
+          <label>微博：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="weibo" value="{$website['weibo']}" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>Email：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="email" value="{$website['email']}" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>地址：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="address" value="{$website['address']}" />
+          <div class="tips"></div>
+        </div>
+      </div>  
+
+      <div class="form-group">
+        <div class="label">
+          <label>copy：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="copy" value="{$website['copy']}" />
+          <div class="tips"></div>
+        </div>
+      </div> 
+              
+      <div class="form-group">
+        <div class="label">
+          <label>统计：</label>
+        </div>
+        <div class="field">
+          <textarea name="html" class="input" style="height:120px;">{$website['html']}</textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+</body></html>

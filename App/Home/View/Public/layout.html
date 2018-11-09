@@ -1,0 +1,144 @@
+<?php
+	$website=C('website');
+?>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?= $website['charset']; ?>">
+<title> <?= $website['title']; ?> </title>
+<meta name="description" content="<?= $website['description']; ?>" />
+<meta name="keywords" content="<?= $website['keywords']; ?>" />
+<link href="__PUBLIC__/Home/css/css.1.1.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/Home/css/css.1.2.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="__PUBLIC__/Home/js/jquery1.42.min.js"></script>
+<script language="javascript" src="__PUBLIC__/Home/js/slide.js"></script>
+
+<!--[if lte IE 6]>
+<script src="__PUBLIC__/Home/js/png.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('div, ul, img, li, input , a');
+    </script>
+<![endif]-->
+
+</head>
+<body>
+<script language="javascript" src="__PUBLIC__/Home/js/ismobile.js"></script>
+<div class="header">
+  <div class="head">
+    <div class="top rte">
+      <div class="logo ale">
+        <a title="<?= $website['title']; ?>" href="">
+          <img src="__PUBLIC__/<?= $website['logo']; ?>" alt="<?= $website['title']; ?>" width="130" height="60">
+        </a>
+      </div>
+      <div class="logo_title"><h2><?= $website['title']; ?></h2>
+      <p><?= $website['keywords']; ?></p>
+      </div>
+      <div class="tel ale">咨询服务热线<br><span class="red"><?= $website['tel']; ?></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- nav -->
+<div class="navBar">
+  <ul class="nav clearfix">
+
+  <volist name="menuList" id="vo">
+    <li class="n" >
+      <a href="__MODULE__/{$vo.route}">{$vo.name}</a>
+
+      <if condition="($vo['cid'] eq 3) OR ($vo['name'] eq '服务项目' ) ">
+        <ul class="sub">   
+          <volist name="serverList" id="vserver">
+            <li><a href="{:U('Server/index/id/'.$vserver['cid'])}"> {$vserver.name} </a> </li>  
+          </volist>          
+        </ul>
+      <elseif condition="($vo['cid'] eq 5) OR ($vo['name'] eq '咨询中心' ) "/>
+        <ul class="sub">   
+          <volist name="newList" id="vserver">
+            <li><a href="{:U('Information/index/pid/'.$vserver['cid'])}"> {$vserver.name} </a> </li>  
+          </volist>          
+        </ul>
+      <else /> </if>
+
+    </li>
+
+  </volist>  
+<!-- nav -->
+
+
+
+  </ul>
+</div>
+<script type="text/javascript">
+		jQuery(".nav").slide({ 
+				type:"menu", //效果类型
+				titCell:".n", // 鼠标触发对象
+				targetCell:".sub", // 效果对象，必须被titCell包含
+				effect:"slideDown",//下拉效果
+				delayTime:300, // 效果时间
+				triggerTime:0, //鼠标延迟触发时间
+				returnDefault:true  //返回默认状态
+			});
+	</script> 
+<!-- nav -->
+
+
+
+
+	{__CONTENT__}
+
+
+
+
+
+
+<div class="h20"></div>
+<div class="h20"></div>
+
+<div class="footer">
+  <div class="footnav">
+    <div class="w ">
+    <ul class="nac">
+
+
+
+<!-- nav  -->
+<volist name="menuList" id="vo" key="k">
+
+      <if condition="$k lt 8">
+        <li><a href="__MODULE__/{$vo.route}">{$vo.name}</a></li>
+        <li>|</li>
+      <else /> </if>
+
+</volist>
+<!-- nav  -->
+
+
+
+    </ul>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="copyright"> 
+      联系人：<?= $website['contact'] ;?>　
+      电话：<?= $website['tel'] ;?>　
+      Q Q：<?= $website['qq'] ;?>　
+      地址：<?= $website['address'] ;?> <br>
+      <?= $website['copy'] ;?>
+      
+<!--       <a href="http://www.gzsnktwx.com/sitemap.html" target="_blank">网站地图</a>|
+      <a href="http://www.gzsnktwx.com/sitemap.xml" target="_blank">XML</a><br> -->
+
+    <br>
+      本站关键词：<?= $website['keywords'] ;?>
+
+  <!--       <br>
+        网站备案号：<a href="__PUBLIC__/Home/http://www.miibeian.gov.cn/"></a> -->
+    </div>
+  </div>
+</div>
+<script src="__PUBLIC__/Home/js/piaofu.js" language="JavaScript"></script>
+
+</body>
+</html>

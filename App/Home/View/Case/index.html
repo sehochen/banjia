@@ -1,0 +1,57 @@
+<layout name="Public/layout"/> 
+
+<!-- slide -->
+<include file="Public/slide" />
+
+
+
+<div class="bannerbg"> </div>
+<div class="bgb"></div>
+<div class="h0"></div>
+<div class="w">
+
+
+<!-- server -->
+<include file="Public/server" />
+
+
+  <div class="right r">
+    <div class="column"> 当前位置：<a href="{:U('Index/index')}">主页</a> > <a href='__CONTROLLER__/index'>服务案例</a>  </div>
+    <div class="zcont">
+      <ul class="productlist3">
+
+<!-- case -->
+      <volist name="caseList" id="vo">
+        <li> 
+          <a href="__CONTROLLER__/detail/id/{$vo.id}" title="{$vo.title}" class="product">
+            <img src="__PUBLIC__/{$vo.img}" title="{$vo.title}" alt="{$vo.title}" border="0" width="230" height="165">
+          </a> 
+          <a href="__CONTROLLER__/detail/id/{$vo.id}" title="{$vo.title}" class="tit" style=" color:#">
+            <strong>{$vo.title}</strong>
+          </a> 
+        </li>        
+      </volist>  
+<!-- case -->
+
+        
+      </ul>
+      <div class="h20"></div>
+      <div class="pagess">
+    <ul>
+     <li>
+       <span class="pageinfo">
+          <!-- 共 <strong>1</strong>页 -->
+          <strong>{$count}</strong>条记录
+
+       </span>
+     </li>
+
+    </ul>
+     {$page}
+    </div>
+      <div class="h20"></div>
+    </div>
+  </div>
+</div>
+
+

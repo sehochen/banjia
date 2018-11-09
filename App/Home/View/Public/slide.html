@@ -1,0 +1,25 @@
+<div class="fullSlide">
+  <div class="bd">
+    <ul style="position: relative; width: 683px; ">
+
+    <volist name="slideList" id="vo">
+       
+      <li style="background-image: url(__PUBLIC__/{$vo.img}); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; position: absolute; width: 683px; left: 0px; top: 0px; display: none; background-position: 50% 50%; background-repeat: no-repeat no-repeat; ">
+         <a href="__PUBLIC__/{$vo.img}" title="{$vo.title}"></a> 
+      </li>
+
+    </volist>
+
+    </ul>
+  </div>
+  <div class="hd">
+    <ul>
+      <li class="on">1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+    jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul",  effect:"fold",  autoPlay:true, autoPage:true, trigger:"click",interTime:5000 });
+</script>

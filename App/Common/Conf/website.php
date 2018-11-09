@@ -1,0 +1,18 @@
+<?php return array (
+  'title' => '广州搬家公司',
+  'logo' => 'Uploads/20170420/58f89dba8d71f.jpg',
+  'keywords' => '广州空调维修,广州空调移机,广州空调清洗,广州空调加雪种,广州空调安装,广州中央空调维修,广州冷库维修安装',
+  'description' => 'vvm是vivid vehicle membrane 的缩写，意思是明亮的车辆贴膜。',
+  'charset' => 'utf-8',
+  'contact' => '李显示',
+  'phone' => '18101565685',
+  'tel' => '0532-5689107',
+  'fax' => '0532-5689107',
+  'qq' => '81001985',
+  'wechat' => 'bool1993',
+  'weibo' => '卓伟',
+  'email' => '30024167@qq.com',
+  'address' => '江苏省苏州市园区独墅湖创意产业园',
+  'copy' => 'Copyright © 2017 版权所有 苏宁空调维修售后服务网',
+  'html' => 'html统计代码填在这里',
+);

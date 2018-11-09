@@ -1,0 +1,58 @@
+<layout name="Public/layout"/> 
+
+<!-- slide -->
+<include file="Public/slide" />
+
+
+<div class="bannerbg"> </div>
+<div class="bgb"></div>
+<div class="h0"></div>
+<div class="w">
+
+
+<!-- information -->
+<include file="Public/information" />
+<!-- information -->
+
+
+  <!-- left end -->
+  <div class="right r">
+    <div class="column"> 当前位置：<a href="{:U('Index/index')}">主页</a> > <a href="{:U('Information/index')}">资讯中心</a> >   </div>
+    <div class="zcont">
+      <ul class="newslist">
+        
+<volist name="list" id="vo">
+        <li>
+          <span class="date">{:date('Y年m月d日',$vo['add_time'])}</span>
+          <a href="__CONTROLLER__/detail/id/{$vo.id}" title="{$vo.title}" style=" color:#">{$vo.title}</a>
+        </li>
+</volist>    
+        
+      </ul>
+      <div style="height:20px; clear:both;"></div>
+      <div class="pagess">
+    <ul>
+    {$page}
+<!--      <li>首页</li>
+    <li class="thisclass">1</li>
+    <li><a href='list_13_2.html'>2</a></li>
+    <li><a href='list_13_3.html'>3</a></li>
+    <li><a href='list_13_4.html'>4</a></li>
+    <li><a href='list_13_5.html'>5</a></li>
+    <li><a href='list_13_6.html'>6</a></li>
+    <li><a href='list_13_7.html'>7</a></li>
+    <li><a href='list_13_8.html'>8</a></li>
+    <li><a href='list_13_9.html'>9</a></li>
+    <li><a href='list_13_10.html'>10</a></li>
+    <li><a href='list_13_2.html'>下一页</a></li>
+    <li><a href='list_13_10.html'>末页</a></li> -->
+
+    </ul>
+    </div>
+      <div style="height:20px; clear:both;"></div>
+    </div>
+  </div>
+</div>
+
+
+>
